@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<style>* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: white;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    max-width: 796px;
+}
+.section-title {
+    color: #9e9e9e;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 50px 0 0 0;
+}
+.section-title::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #2ecc71;
+    margin-bottom: 40px;
+}
+.services-inner {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-row-gap: 50px;
+    grid-column-gap: 20px;
+}
+.services-box {
+    color: #9e9e9e;
+    text-align: center;
+    text-transform: capitalize;
+    border: 1px solid #2ecc71;
+    padding: 15px;
+}
+.icon {
+    display: block;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    margin: 0 auto 10px auto;
+}
+.icon i {
+    color: #333;
+    font-size: 1.2rem;
+}
+.services-title {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    font-weight: bolder;
+}
+
+.navbar-brand b{
+    color: green;
+    font-family:cursive;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px grey;
+}
+
+
+
+</style>
+<!-- Navigation  -->
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" style="color: black; font-weight: bolder;" href="./index.html"><b>PLANT</b>  PALACE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link itemlink" href="./index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link itemlink" href="./test.html">PRODUCTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link itemlink" href="./services.html">SERVICES</a>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link itemlink" href="./contact.html">CONTACT</a>
+            </li>
+          </ul>
+          
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="bi bi-search"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./login.html"><i class="bi bi-person"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./chechkout.html"><i class="bi bi-cart"></i></a>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+    <h2 class="section-title">services</h2>
+    <div class="services-inner">
+      
+      <div class="services-box">
+        <span class="icon">
+          <i class="fas fa-paint-brush"></i>
+        </span>
+        <h3 class="services-title">EASY TO BUY PLANTS ONLINE
+            Now you can buy almost any plant online across Pakistan in major cities including Lahore, Islamabad, Rawalpindi, Karachi and many more. Delivery Service Areas</h3>
+      </div>
+      
+      
+      
+      <div class="services-box">
+        <span class="icon">
+          <i class="fas fa-code"></i>
+        </span>
+        <h3 class="services-title">GARDEN LANDSCAPING
+            Fantasizing about that new garden of yours or wanting to spurt life into that homely lawn, etree services are just a click away. Landscaping Services</h3>
+      </div>
+      
+      <div class="services-box">
+        <span class="icon">
+          <i class="fas fa-server"></i>
+        </span>
+        <h3 class="services-title">LIVING ROOM READY PLANTS!
+            No more of those messy re-pottings and finding the right soil for your plants. With our plants, all you have to do is unwrap and enjoy your living room ready plants. All of our plants come with high quality plastic pots and with the right soil.</h3>
+      </div>
+      
+      <div class="services-box">
+        <span class="icon">
+          <i class="fab fa-searchengin"></i>
+        </span>
+        <h3 class="services-title">LAWN CARE SERVICES
+            At eTree®, we believe the good life begins with a great lawn. And we know that nothing can replace the happiness and healthiness of a life lived outside. See Our Lawn Care Services</h3>
+      </div>
+    
+      
+    </div>
+  </div>
+
+    
+</body>
+</html>

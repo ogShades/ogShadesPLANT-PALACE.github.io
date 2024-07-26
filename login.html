@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- CSS -->
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Montserrat:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --brand-color: #f6f6f6;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--brand-color);
+}
+.login-page {
+  width: 360px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: var(--brand-color);
+  max-width: 360px;
+  margin: 40px 0;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+@media (max-width: 360px) {
+  .form {
+    max-width: 320px;
+  }
+}
+.form h2 {
+  color: #1e1e1e;
+}
+.form input {
+  font-family: "Inter", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 15px 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #43a047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4caf50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.form .login-form {
+  display: none;
+}
+.form .register-form.active {
+  display: block;
+}
+.form .login-form.active {
+  display: block;
+}
+
+</style>
+
+
+<!-- HTML -->
+    <div class="login-page">
+        <a class="navbar-brand" style="color: black; font-weight: bolder; font-family:cursive; text-decoration: none;" href="./index.html"><b style="color: green;">PLANT</b>  PALACE</a>
+      <div class="form">
+        <form class="register-form">
+            <h2>Register</h2>
+          <input autocomplete="on" type="text" placeholder="Name" />
+          <input autocomplete="off" type="password" placeholder="Password" />
+          <input autocomplete="on" type="text" placeholder="Email address" />
+          <button>Register</button>
+          <p class="message">
+            Already registered? <a href="#" id="signInBtn">Sign In</a>
+          </p>
+        </form>
+        <form class="login-form">
+            <h2>Login</h2>
+          <input autocomplete="on" type="text" placeholder="Username" />
+          <input autocomplete="off" type="password" placeholder="Password" />
+          <button>Login</button>
+          <p class="message">
+            Not Registered? <a href="#" id="signUpBtn">Create an account</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+<!-- JavaScript -->
+
+    <script>// Selectors 
+        const signUpBtn = document.querySelector(".message a#signUpBtn");
+        console.log(signUpBtn);
+        const signInBtn = document.querySelector(".message a#signInBtn");
+        const registerForm = document.querySelector("form.register-form")
+        const loginForm = document.querySelector("form.login-form")
+        
+        
+        // Toggle Functions
+        const toggleSignUp = () => {
+            registerForm.classList.toggle("active");
+        }
+        const toggleSignIn = () => {
+            loginForm.classList.toggle("active");
+        }
+        
+        // Class Functionality
+        window.addEventListener('load', (event) => {
+            registerForm.classList.add("active");
+        });
+        signUpBtn.addEventListener("click", () => {
+            registerForm.classList.add("active");
+            loginForm.classList.remove("active");
+        });
+        signInBtn.addEventListener("click", () => {
+            loginForm.classList.add("active");
+            registerForm.classList.remove("active");
+        
+        });
+        
+        </script>
+</body>
+</html>
